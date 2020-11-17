@@ -21,12 +21,34 @@
   border-radius: 2px;
 }
 
+.header-title {
+  color: teal;
+  background-color: red;
+}
+
+.section-container {
+  color: yellow;
+  background-color: green;
+}
+
+.lexa {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+
 section {
   background-color: gray;
 }
 
 h1 {
   color: red;
+}
+
+.header {
+  color: red;
+  text-decoration: royalblue;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
