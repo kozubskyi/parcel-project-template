@@ -117,83 +117,36 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
+})({"js/modal.js":[function(require,module,exports) {
+(function () {
+  //MENU
+  var menuBtnRef = document.querySelector("[data-menu-button]");
+  var mobileMenuRef = document.querySelector("[data-menu]");
+  var headerLogoRef = document.querySelector("[header-menu]");
+  var burgerButtonRef = document.querySelector("[burger-button]");
+  var bodyRef = document.querySelector("[data-body]");
+  menuBtnRef.addEventListener("click", function () {
+    var expanded = menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+    headerLogoRef.classList.toggle("is-open");
+    burgerButtonRef.classList.toggle("is-active");
+    bodyRef.classList.toggle("is-active");
+    menuBtnRef.classList.toggle("is-open");
+    menuBtnRef.setAttribute("aria-expanded", !expanded);
+    mobileMenuRef.classList.toggle("is-open");
+  });
+  var refs = {
+    openModalBtn: document.querySelector('[data-modal-open]'),
+    closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]')
   };
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
   }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\mobile\\hero-bg-mob@x1.png":[["hero-bg-mob@x1.07377f09.png","images/mobile/hero-bg-mob@x1.png"],"images/mobile/hero-bg-mob@x1.png"],"./..\\images\\mobile\\hero-bg-mob@x2.png":[["hero-bg-mob@x2.29a70953.png","images/mobile/hero-bg-mob@x2.png"],"images/mobile/hero-bg-mob@x2.png"],"./..\\images\\tablet\\hero-bg-tabl@x1.png":[["hero-bg-tabl@x1.75357d6b.png","images/tablet/hero-bg-tabl@x1.png"],"images/tablet/hero-bg-tabl@x1.png"],"./..\\images\\tablet\\hero-bg-tabl@x2.png":[["hero-bg-tabl@x2.5c854196.png","images/tablet/hero-bg-tabl@x2.png"],"images/tablet/hero-bg-tabl@x2.png"],"./..\\images\\desctop\\hero-bg@x1.png":[["hero-bg@x1.6df8e3ec.png","images/desctop/hero-bg@x1.png"],"images/desctop/hero-bg@x1.png"],"./..\\images\\desctop\\hero-bg@x2.png":[["hero-bg@x2.a920d979.png","images/desctop/hero-bg@x2.png"],"images/desctop/hero-bg@x2.png"],"./..\\images\\icons\\man.svg":[["man.b8bde4f9.svg","images/icons/man.svg"],"images/icons/man.svg"],"./..\\images\\icons\\phone.svg":[["phone.636ae0df.svg","images/icons/phone.svg"],"images/icons/phone.svg"],"./..\\images\\icons\\dollar.svg":[["dollar.70c020d5.svg","images/icons/dollar.svg"],"images/icons/dollar.svg"],"./..\\images\\icons\\man-desktop.svg":[["man-desktop.c3e4e70e.svg","images/icons/man-desktop.svg"],"images/icons/man-desktop.svg"],"./..\\images\\icons\\phone-desktop.svg":[["phone-desktop.d9066db1.svg","images/icons/phone-desktop.svg"],"images/icons/phone-desktop.svg"],"./..\\images\\icons\\dollar-desktop.svg":[["dollar-desktop.dd446494.svg","images/icons/dollar-desktop.svg"],"images/icons/dollar-desktop.svg"],"./..\\images\\icons\\bomba.svg":[["bomba.540ae346.svg","images/icons/bomba.svg"],"images/icons/bomba.svg"],"./..\\images\\icons\\fire-icon.svg":[["fire-icon.886a4423.svg","images/icons/fire-icon.svg"],"images/icons/fire-icon.svg"],"./..\\images\\mobile\\footer-mob@x1.png":[["footer-mob@x1.1fb3d690.png","images/mobile/footer-mob@x1.png"],"images/mobile/footer-mob@x1.png"],"./..\\images\\mobile\\footer-mob@x2.png":[["footer-mob@x2.f319e012.png","images/mobile/footer-mob@x2.png"],"images/mobile/footer-mob@x2.png"],"./..\\images\\tablet\\footer-tabl@x1.png":[["footer-tabl@x1.330271ab.png","images/tablet/footer-tabl@x1.png"],"images/tablet/footer-tabl@x1.png"],"./..\\images\\tablet\\footer-tabl@x2.png":[["footer-tabl@x2.81f92932.png","images/tablet/footer-tabl@x2.png"],"images/tablet/footer-tabl@x2.png"],"./..\\images\\desctop\\futer-desk@x1.png":[["futer-desk@x1.950b51f1.png","images/desctop/futer-desk@x1.png"],"images/desctop/futer-desk@x1.png"],"./..\\images\\desctop\\futer-desk@x2.png":[["futer-desk@x2.c3fb3ef4.png","images/desctop/futer-desk@x2.png"],"images/desctop/futer-desk@x2.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})();
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +350,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal.js"], null)
+//# sourceMappingURL=/modal.4331011c.js.map

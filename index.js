@@ -184,16 +184,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\mobile\\hero-bg-mob@x1.png":[["hero-bg-mob@x1.07377f09.png","images/mobile/hero-bg-mob@x1.png"],"images/mobile/hero-bg-mob@x1.png"],"./..\\images\\mobile\\hero-bg-mob@x2.png":[["hero-bg-mob@x2.29a70953.png","images/mobile/hero-bg-mob@x2.png"],"images/mobile/hero-bg-mob@x2.png"],"./..\\images\\tablet\\hero-bg-tabl@x1.png":[["hero-bg-tabl@x1.75357d6b.png","images/tablet/hero-bg-tabl@x1.png"],"images/tablet/hero-bg-tabl@x1.png"],"./..\\images\\tablet\\hero-bg-tabl@x2.png":[["hero-bg-tabl@x2.5c854196.png","images/tablet/hero-bg-tabl@x2.png"],"images/tablet/hero-bg-tabl@x2.png"],"./..\\images\\desctop\\hero-bg@x1.png":[["hero-bg@x1.6df8e3ec.png","images/desctop/hero-bg@x1.png"],"images/desctop/hero-bg@x1.png"],"./..\\images\\desctop\\hero-bg@x2.png":[["hero-bg@x2.a920d979.png","images/desctop/hero-bg@x2.png"],"images/desctop/hero-bg@x2.png"],"./..\\images\\icons\\man.svg":[["man.b8bde4f9.svg","images/icons/man.svg"],"images/icons/man.svg"],"./..\\images\\icons\\phone.svg":[["phone.636ae0df.svg","images/icons/phone.svg"],"images/icons/phone.svg"],"./..\\images\\icons\\dollar.svg":[["dollar.70c020d5.svg","images/icons/dollar.svg"],"images/icons/dollar.svg"],"./..\\images\\icons\\man-desktop.svg":[["man-desktop.c3e4e70e.svg","images/icons/man-desktop.svg"],"images/icons/man-desktop.svg"],"./..\\images\\icons\\phone-desktop.svg":[["phone-desktop.d9066db1.svg","images/icons/phone-desktop.svg"],"images/icons/phone-desktop.svg"],"./..\\images\\icons\\dollar-desktop.svg":[["dollar-desktop.dd446494.svg","images/icons/dollar-desktop.svg"],"images/icons/dollar-desktop.svg"],"./..\\images\\icons\\bomba.svg":[["bomba.540ae346.svg","images/icons/bomba.svg"],"images/icons/bomba.svg"],"./..\\images\\icons\\fire-icon.svg":[["fire-icon.886a4423.svg","images/icons/fire-icon.svg"],"images/icons/fire-icon.svg"],"./..\\images\\mobile\\footer-mob@x1.png":[["footer-mob@x1.1fb3d690.png","images/mobile/footer-mob@x1.png"],"images/mobile/footer-mob@x1.png"],"./..\\images\\mobile\\footer-mob@x2.png":[["footer-mob@x2.f319e012.png","images/mobile/footer-mob@x2.png"],"images/mobile/footer-mob@x2.png"],"./..\\images\\tablet\\footer-tabl@x1.png":[["footer-tabl@x1.330271ab.png","images/tablet/footer-tabl@x1.png"],"images/tablet/footer-tabl@x1.png"],"./..\\images\\tablet\\footer-tabl@x2.png":[["footer-tabl@x2.81f92932.png","images/tablet/footer-tabl@x2.png"],"images/tablet/footer-tabl@x2.png"],"./..\\images\\desctop\\futer-desk@x1.png":[["futer-desk@x1.950b51f1.png","images/desctop/futer-desk@x1.png"],"images/desctop/futer-desk@x1.png"],"./..\\images\\desctop\\futer-desk@x2.png":[["futer-desk@x2.c3fb3ef4.png","images/desctop/futer-desk@x2.png"],"images/desctop/futer-desk@x2.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -221,7 +212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54646" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54540" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -397,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/index.js.map
