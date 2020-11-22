@@ -141,7 +141,7 @@
   color: $silver-color;
 
   @include for-size(desktop) {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-left: 1px;
     font-size: 18px;
     line-height: 1.56;
@@ -172,16 +172,10 @@
 @include for-size(tablet) {
   .teacher-container {
     display: flex;
-
-    @include for-size(desktop) {
-      // padding-right: 112px;
-    }
   }
 }
 
 .text-div {
-  // outline: 1px solid red;
-
   @include for-size(tablet) {
     flex-basis: calc(100% - 283px - 40px);
   }
