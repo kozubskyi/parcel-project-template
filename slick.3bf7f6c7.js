@@ -117,35 +117,81 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/modal.js":[function(require,module,exports) {
-(function () {
-  //MENU
-  var menuBtnRef = document.querySelector("[data-menu-button]");
-  var mobileMenuRef = document.querySelector("[data-menu]");
-  var headerLogoRef = document.querySelector("[header-menu]");
-  var burgerButtonRef = document.querySelector("[burger-button]");
-  var bodyRef = document.querySelector("[data-body]");
-  menuBtnRef.addEventListener("click", function () {
-    var expanded = menuBtnRef.getAttribute("aria-expanded") === "true" || false;
-    headerLogoRef.classList.toggle("is-open");
-    burgerButtonRef.classList.toggle("is-active");
-    bodyRef.classList.toggle("is-active");
-    menuBtnRef.classList.toggle("is-open");
-    menuBtnRef.setAttribute("aria-expanded", !expanded);
-    mobileMenuRef.classList.toggle("is-open");
+})({"js/slick.js":[function(require,module,exports) {
+$(document).ready(function () {
+  //     $('#reviews-slider').slick({
+  //         //   rtl: true
+  //         asNavFor: '#gallery'
+  //     });
+  //     $('#gallery').slick({
+  //          responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         arrows: false,
+  //         centerMode: false,
+  //         infinite: true,
+  //           slidesToShow: 3,
+  //             slidesToScroll: 3
+  //       }
+  //              },
+  //                 {
+  //       breakpoint: 2000,
+  //       settings: {
+  //         arrows: false,
+  //           centerMode: false,
+  //         infinite: false,
+  //           slidesToShow: 7,
+  //             slidesToScroll: 3,
+  //       }
+  //              }
+  //   ]
+  //     });
+  $('#reviews-slider').slick({
+    asNavFor: '#gallery',
+    responsive: [{
+      breakpoint: 728,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true
+      }
+    }]
   });
-  var refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]')
-  };
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  $('#gallery').slick({
+    asNavFor: '#reviews-slider',
+    responsive: [{
+      breakpoint: 728,
+      settings: {
+        asNavFor: '#reviews-slider',
+        arrows: true,
+        centerMode: false,
+        infinite: true,
+        focusOnSelect: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    }, {
+      breakpoint: 4000,
+      settings: {
+        asNavFor: '#reviews-slider',
+        arrows: false,
+        centerMode: false,
+        infinite: true,
+        focusOnSelect: true,
+        slidesToShow: 6,
+        slidesToScroll: 1
+      }
+    }] // slidesToShow: 3,
+    // slidesToScroll: 1,
+    // asNavFor: '#reviews-slider',
+    // dots: false,
+    // centerMode: false,
+    // focusOnSelect: true
 
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
+  });
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -350,5 +396,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal.js"], null)
-//# sourceMappingURL=/modal.4331011c.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slick.js"], null)
+//# sourceMappingURL=/slick.3bf7f6c7.js.map
