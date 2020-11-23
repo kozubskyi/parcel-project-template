@@ -3,32 +3,32 @@
   background-color: $primary-black-color;
   padding-top: 50px;
   padding-bottom: 50px;
-  
-  @include for-size(tablet){
+
+  @include for-size(tablet) {
     padding-top: 60px;
     padding-bottom: 189px;
   }
-  @include for-size(desktop){
+  @include for-size(desktop) {
     padding-top: 120px;
     padding-bottom: 363px;
   }
-}
-.our-program-list {
-  /* outline: 1px solid red; */
-  width: calc((100%  * 2) / 3);
-  margin-left: auto;
-  margin-top: 43px;
-  @include for-size(tablet) {
-    width: calc((100% / 6) * 5);
-    margin-top: 52px;
+
+  .our-program-list {
+    /* outline: 1px solid red; */
+    width: calc((100% * 2) / 3);
+    margin-left: auto;
+    margin-top: 43px;
+    @include for-size(tablet) {
+      width: calc((100% / 6) * 5);
+      margin-top: 52px;
+    }
+    @include for-size(desktop) {
+      width: 100%;
+      display: flex;
+      margin-top: 160px;
+    }
   }
-  @include for-size(desktop) {
-    width: 100%;
-    display: flex;
-    margin-top: 160px;
-  }
-}
-/* .our-program-item {
+  /* .our-program-item {
   width: calc((100% - 10px) * 2 / 3);
   margin-right: auto;
   @include for-size(tablet) {
@@ -36,200 +36,198 @@
   }
 } */
 
-.our-program-title {
-  color: $white-color;
+  .our-program-title {
+    color: $white-color;
 
-  text-align: center;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.3;
-  letter-spacing: 0.03em;
-
-  @include for-size(tablet) {
-    text-align: left;
-    font-size: 26px;
-  }
-  @include for-size(desktop){
-    font-size: 46px;
-  }
-}
-
-.our-program-semestr {
-  font-size: 14px;
-  line-height: 2;
-  margin-top: 0px;
-
-  text-transform: uppercase;
-
-  color: $white-color;
-
-  @include for-size(desktop){
-
-font-size: 30px;
-line-height: 0.93;
-
-  }
-}
-
-.our-program-type {
-  font-size: 12px;
-  line-height: 1.64;
-  margin-top: 8px;
-
-  color: $orange-color;
-  @include for-size(desktop) {
+    text-align: center;
+    font-weight: 800;
     font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+
+    @include for-size(tablet) {
+      text-align: left;
+      font-size: 26px;
+    }
+    @include for-size(desktop) {
+      font-size: 46px;
+    }
   }
-}
 
-
-.our-program-text {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.67;
-  margin-top: 5px;
-
-  color: $silver-color;
-
-  opacity: 0.5;
-  @include for-size(desktop) {
-    font-size: 18px;
-line-height: 1.56;
-  }
-}
-
-.our-program-podblock {
-  
-  margin-top: 5px;
-
-  @include for-size(desktop){
-    margin-top: 25px;
-  }
-}
-
-@include for-size(tablet-only){
-@include for-size(tablet) {
-.our-program-block {
-  display: flex;
-}
-
-.our-program-podblock{
-
-  width: calc((100% - 50px * 2)/3);
-  margin-top: 5px;
-}
-.our-program-podblock:not(:last-child) {
-
-  margin-right: 50px;
-}
-}
-}
-
-.our-program-semestr {
-  position: relative;
-}
-
-.our-program-item:not(:first-child){
-  margin-top: 40px;
-  @include for-size(tablet){
-    margin-top: 30px;
-  }
-  @include for-size(desktop){
+  .our-program-semestr {
+    font-size: 14px;
+    line-height: 2;
     margin-top: 0px;
-    margin-left: 30px;
+
+    text-transform: uppercase;
+
+    color: $white-color;
+
+    @include for-size(desktop) {
+      font-size: 30px;
+      line-height: 0.93;
+    }
   }
-}
 
+  .our-program-type {
+    font-size: 12px;
+    line-height: 1.64;
+    margin-top: 8px;
 
-
-.our-program-semestr::before {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -34px;
-  content: '';
-  display: block;
-  height: 12px;
-  width: 12px;
-  background-color: $orange-color;
-  border-radius: 50%;
-  z-index: 2;
-  @include for-size(tablet) {
-    left: -64px;
+    color: $orange-color;
+    @include for-size(desktop) {
+      font-size: 20px;
+    }
   }
-  @include for-size(desktop) {
-    top: -68.5px;
-    left: 0;
+
+  .our-program-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.67;
+    margin-top: 5px;
+
+    color: $silver-color;
+
+    opacity: 0.5;
+    @include for-size(desktop) {
+      font-size: 18px;
+      line-height: 1.56;
+    }
   }
-}
 
+  .our-program-podblock {
+    margin-top: 5px;
 
-.our-program-border:after {
-  position: absolute;
-  display: block;
-  content: '';
-  height: calc(100% + 40px);
-  width: 1px;
-  background-color: $white-color;
-  left: -28px;
-  top: 12px;
-  z-index: 0;
-  @include for-size(tablet) {
-    left: -58px;
-    height: calc(100% + 30px);
+    @include for-size(desktop) {
+      margin-top: 25px;
+    }
   }
-  @include for-size(desktop) {
-    width: 10000%;
-    height: 1px;
-    top:-68.5px;
-    left: -1000%;
-     }
 
-}
-.our-program-item {
-  position: relative;
-/*   outline: 1px solid green; */
-  @include for-size(desktop){
-    width: calc((100% - 30px * 4) / 5);
+  @include for-size(tablet-only) {
+    @include for-size(tablet) {
+      .our-program-block {
+        display: flex;
+      }
+
+      .our-program-podblock {
+        width: calc((100% - 50px * 2) / 3);
+        margin-top: 5px;
+      }
+      .our-program-podblock:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
   }
-}
 
-.our-program-image-mobile {
-  display: none;
-@include for-size(mobile-only) {
-  display: block;
-  float: right;
-  margin: 0 -20px 0 -5px;
-  opacity: 0.5;
-  z-index: 99;
-}}
+  .our-program-semestr {
+    position: relative;
+  }
 
-.our-program-image-tablet {
-  display: none;
-@include for-size(tablet-only) {
-  @include for-size(tablet){
-  display: block;
-  float: right;
-  margin: -26px -20px 0 0;
-  opacity: 0.5;
-}}
-}
+  .our-program-item:not(:first-child) {
+    margin-top: 40px;
+    @include for-size(tablet) {
+      margin-top: 30px;
+    }
+    @include for-size(desktop) {
+      margin-top: 0px;
+      margin-left: 30px;
+    }
+  }
 
-.our-program-image-desktop {
-  display: none;
-  @include for-size(desktop){
+  .our-program-semestr::before {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -34px;
+    content: '';
     display: block;
-    float: right;
-  margin: 0 0 59px -271px;
-  bottom: 0px;
-  height: 502px;
-  width: 760px;
-  opacity: 0.5;
+    height: 12px;
+    width: 12px;
+    background-color: $orange-color;
+    border-radius: 50%;
+    z-index: 2;
+    @include for-size(tablet) {
+      left: -64px;
+    }
+    @include for-size(desktop) {
+      top: -68.5px;
+      left: 0;
+    }
+  }
+
+  .our-program-border:after {
+    position: absolute;
+    content: '';
+    height: calc(100% + 40px);
+    width: 1px;
+    background-color: $white-color;
+    left: -28px;
+    top: 12px;
+
+    @include for-size(tablet) {
+      left: -58px;
+      height: calc(100% + 30px);
+    }
+    @include for-size(desktop) {
+      width: 100%;
+      height: 1px;
+      top: 269px;
+      left: 0px;
+    }
+  }
+
+  /*   .our-program-list:after {
+    @include for-size(desktop) {
+      width: 1000%;
+      height: 5px;
+      top: -277px;
+      left: -1000%;
+    }
+  } */
+
+  .our-program-item {
+    @include for-size(tablet-only) {
+      position: relative;
+    }
+    /*   outline: 1px solid green; */
+    @include for-size(desktop) {
+      width: calc((100% - 30px * 4) / 5);
+    }
+  }
+
+  .our-program-image-mobile {
+    display: none;
+    @include for-size(mobile-only) {
+      display: block;
+      float: right;
+      margin: 0 -20px 0 -5px;
+    }
+  }
+
+  .our-program-image-tablet {
+    display: none;
+    @include for-size(tablet-only) {
+      @include for-size(tablet) {
+        display: block;
+        float: right;
+        margin: -26px -20px 0 0;
+      }
+    }
+  }
+
+  .our-program-image-desktop {
+    display: none;
+    @include for-size(desktop) {
+      position: absolute;
+      display: block;
+      float: right;
+      margin: 0 0 59px -271px;
+      bottom: 0px;
+      height: 502px;
+      width: 760px;
+    }
   }
 }
-
-
 /* .our-program-img {
   position: relative;
 }
