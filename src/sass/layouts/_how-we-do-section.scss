@@ -1,6 +1,10 @@
 .how-we-do-container {
-  padding-top: 225px;
+  padding-top: 280px;
   padding-bottom: 50px;
+
+  @include for-size(tablet) {
+    padding-top: 230px;
+  }
 
   @include for-size(desktop) {
     padding-top: 280px;
