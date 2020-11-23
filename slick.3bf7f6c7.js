@@ -119,38 +119,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"js/slick.js":[function(require,module,exports) {
 $(document).ready(function () {
-  //     $('#reviews-slider').slick({
-  //         //   rtl: true
-  //         asNavFor: '#gallery'
-  //     });
-  //     $('#gallery').slick({
-  //          responsive: [
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         arrows: false,
-  //         centerMode: false,
-  //         infinite: true,
-  //           slidesToShow: 3,
-  //             slidesToScroll: 3
-  //       }
-  //              },
-  //                 {
-  //       breakpoint: 2000,
-  //       settings: {
-  //         arrows: false,
-  //           centerMode: false,
-  //         infinite: false,
-  //           slidesToShow: 7,
-  //             slidesToScroll: 3,
-  //       }
-  //              }
-  //   ]
-  //     });
   $('#reviews-slider').slick({
     asNavFor: '#gallery',
     responsive: [{
-      breakpoint: 728,
+      breakpoint: 768,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -162,7 +134,7 @@ $(document).ready(function () {
   $('#gallery').slick({
     asNavFor: '#reviews-slider',
     responsive: [{
-      breakpoint: 728,
+      breakpoint: 768,
       settings: {
         asNavFor: '#reviews-slider',
         arrows: true,
@@ -191,6 +163,7 @@ $(document).ready(function () {
     // focusOnSelect: true
 
   });
+  new WOW().init({});
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -220,7 +193,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52264" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59318" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

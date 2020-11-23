@@ -129,6 +129,7 @@ $(".item .link").click(function () {
     jQuery(".body").removeClass("is-active");
     jQuery(".header-logo").removeClass("is-open");
     jQuery(".burger-button").removeClass("is-open is-active");
+    jQuery(".header").removeClass("is-open");
     return false;
   });
 });
@@ -160,7 +161,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52264" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59318" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
