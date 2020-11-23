@@ -82,7 +82,12 @@
   }
 }
 
-.how-we-do-card-line {
+.how-we-do-card-title::after {
+  content: '—';
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  color: $orange-color;
   color: $orange-color;
   font-size: 20px;
   font-weight: 700;
