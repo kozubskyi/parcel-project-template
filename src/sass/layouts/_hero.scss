@@ -21,7 +21,7 @@
 }
 .hero {
   position: relative;
-  padding-top: 100px;
+  padding-top: 110px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left bottom -20px;
@@ -34,6 +34,7 @@
   }
 
   @include for-size(tablet) {
+    padding-top: 158px;
     background-image: url(../images/tablet/hero-bg-tabl@x1.png);
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -43,6 +44,7 @@
     }
   }
   @include for-size(desktop) {
+    padding-top: 229px;
     background-image: url(../images/desctop/hero-bg@x1.png);
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -82,14 +84,11 @@
   }
 
   .container {
-    padding-top: 15px;
     padding-bottom: 50px;
     @include for-size(tablet) {
-      padding-top: 30px;
       padding-bottom: 93px;
     }
     @include for-size(desktop) {
-      padding-top: 80px;
       padding-bottom: 145px;
     }
   }
