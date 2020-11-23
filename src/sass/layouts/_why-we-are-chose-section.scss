@@ -1,0 +1,143 @@
+.why-we {
+  width: 100%;
+  background-color: $primary-black-color;
+
+  position: relative;
+  padding-bottom: 250px;
+  margin-top: -1px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1354px) {
+    padding-bottom: 120px;
+    margin-top: -31px;
+  }
+}
+
+.container-name {
+  width: 100%;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+}
+
+.section-title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+  color: $white-color;
+
+  width: 150px;
+
+  @media screen and (max-width: 480px) {
+    width: 150px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1354px) {
+    display: none;
+  }
+}
+
+.container-reason {
+  position: relative;
+}
+
+.list-reason {
+  counter-reset: section;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.08em;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @media screen and (min-width: 1354px) {
+    padding: 70px 84px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1353px) {
+  .item-reason:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1353px) {
+  .item-reason:nth-child(n + 5) {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1354px) {
+  .item-reason:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1354px) {
+  .item-reason:nth-child(n + 4) {
+    padding-bottom: 0;
+  }
+}
+
+.item-reason::before {
+  counter-increment: section;
+  content: '0' counter(section);
+  color: $orange-color;
+  position: absolute;
+
+  top: 10px;
+  left: 40px;
+}
+
+.item-reason::after {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 3px;
+  background-color: $orange-color;
+  position: absolute;
+  top: 18px;
+}
+
+.item-reason {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 20px) / 2);
+    margin-right: 20px;
+  }
+
+  @media screen and (min-width: 1354px) {
+    width: calc((100% - 80px) / 3);
+    margin-right: 40px;
+  }
+}

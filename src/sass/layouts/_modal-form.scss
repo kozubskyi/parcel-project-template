@@ -1,0 +1,214 @@
+.backdrop {
+  z-index: 100;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-logo {
+  width: 15px;
+  height: 15px;
+  fill: $primary-black-color;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  .form-label:focus-within & {
+    fill: $orange-color;
+  }
+}
+
+.input-name {
+  position: absolute;
+  left: 0px;
+  top: -4px;
+  transform: translateY(-100%);
+}
+
+.modal-form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white-color;
+
+  padding: 39px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  text-align: center;
+  max-width: 528px;
+  max-height: 609px;
+
+  @include for-size(tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include for-size(desktop) {
+    min-width: 600px;
+    min-height: 650px;
+  }
+}
+
+.form-title {
+  font-size: 14px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  .orange {
+    color: $orange-color;
+  }
+  @include for-size(tablet) {
+    font-size: 15px;
+  }
+  @include for-size(desktop) {
+    line-height: 1.15;
+    font-size: 20px;
+  }
+}
+
+.form-field {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.form-field:last-of-type {
+  margin-bottom: 0px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 0px 0px 0px 42px;
+  min-height: 40px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    outline-color: $orange-color;
+  }
+}
+
+.form-textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  min-height: 120px;
+  padding: 12px 16px;
+  resize: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    outline-color: $orange-color;
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.checkbox-label {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  line-height: 1.16;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include for-size(desktop) {
+    font-size: 14px;
+    line-height: 1.714;
+  }
+}
+
+.checkbox-label a {
+  color: $orange-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 9px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $orange-color;
+  border-radius: 2px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .form-checkbox:checked + & {
+    background-image: url(../images/icons/Vector-5.svg);
+    background-size: contain;
+    border-color: transparent;
+    background-color: $orange-color;
+    background-origin: border-box;
+  }
+}
+
+.form-button {
+  color: $white-color;
+  background-color: $orange-color;
+  font-weight: 700;
+  font-size: 16px;
+  border: 0px;
+  line-height: 1.875;
+  padding: 10px 55px;
+  text-transform: uppercase;
+  min-width: 200px;
+  letter-spacing: 0.08em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.close-logo {
+  width: 15px;
+  height: 15px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-button:hover & {
+    fill: $orange-color;
+  }
+}
+
+.modal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  border: none;
+  background-color: $white-color;
+}
