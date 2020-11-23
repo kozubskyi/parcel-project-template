@@ -19,25 +19,7 @@
       linear-gradient(to bottom, $primary-black-color 77%, $white-color 77%);
     background-repeat: no-repeat;
     background-position: right;
-    fill: rgba(122, 34, 34, 0.6);
   }
-
-  // &::before {
-  //   display: none;
-
-  //   @include for-size(desktop) {
-  //     display: block;
-  //     content: '';
-  //     background-image: url(../images/icons/bomba.svg);
-  //     background-repeat: no-repeat;
-  //     position: absolute;
-  //     // background-size: contain;
-  //     width: 455px;
-  //     height: 472px;
-  //     bottom: 23%;
-  //     right: -50px;
-  //   }
-  // }
 }
 
 .main-problems-container {
@@ -100,8 +82,7 @@
 
 .main-problems-list li::before {
   counter-increment: main-problems;
-  content: '— 0' counter(main-problems) '';
-
+  content: '— ' counter(main-problems, decimal-leading-zero) ''; //decimal-leading-zero - для первых 9 элеметов добавляет 0, после 9 - убирает
   display: block;
   color: $orange-color;
   margin-bottom: 5px;
