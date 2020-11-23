@@ -1,4 +1,5 @@
 .why-we-are-chose-section {
+  padding-top: 70px;
   background-image: linear-gradient(
     to bottom,
     $primary-black-color 80%,
@@ -6,6 +7,7 @@
   );
 
   @include for-size(tablet) {
+    padding-top: 30px;
     background-image: linear-gradient(
       to bottom,
       $primary-black-color 67%,
@@ -14,6 +16,7 @@
   }
 
   @include for-size(desktop) {
+    padding-top: 0px;
     background-image: linear-gradient(
       to bottom,
       $primary-black-color 77%,

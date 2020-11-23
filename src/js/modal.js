@@ -2,8 +2,8 @@
   //MENU
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
-  const headerLogoRef = document.querySelector("[header-menu]");
-  const burgerButtonRef = document.querySelector("[burger-button]");
+  const headerLogoRef = document.querySelector("[data-header-menu]");
+  const burgerButtonRef = document.querySelector("[data-burger-button]");
   const bodyRef = document.querySelector("[data-body]");
   
 

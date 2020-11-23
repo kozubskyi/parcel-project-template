@@ -15,28 +15,10 @@
 
   @include for-size(desktop) {
     position: relative;
-    background-image: linear-gradient(
-      to bottom,
-      $primary-black-color 77%,
-      $white-color 77%
-    );
-  }
-
-  &::before {
-    display: none;
-
-    @include for-size(desktop) {
-      display: block;
-      content: '';
-      background-image: url(../images/icons/bomba.svg);
-      background-repeat: no-repeat;
-      position: absolute;
-      // background-size: contain;
-      width: 455px;
-      height: 472px;
-      bottom: 23%;
-      right: -50px;
-    }
+    background-image: url(../images/icons/group-bomba.svg),
+      linear-gradient(to bottom, $primary-black-color 77%, $white-color 77%);
+    background-repeat: no-repeat;
+    background-position: right;
   }
 }
 
@@ -100,8 +82,7 @@
 
 .main-problems-list li::before {
   counter-increment: main-problems;
-  content: '— 0' counter(main-problems) '';
-
+  content: '— ' counter(main-problems, decimal-leading-zero) ''; //decimal-leading-zero - для первых 9 элеметов добавляет 0, после 9 - убирает
   display: block;
   color: $orange-color;
   margin-bottom: 5px;
