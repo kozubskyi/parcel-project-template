@@ -164,11 +164,20 @@
   background-color: $white-color;
   left: -28px;
   top: 12px;
-  z-index: 0;
+
   @include for-size(tablet) {
     left: -58px;
     height: calc(100% + 30px);
   }
+  /*   @include for-size(desktop) {
+    width: 10000%;
+    height: 1px;
+    top: -68.5px;
+    left: -1000%;
+  } */
+}
+
+.our-program-list:after {
   @include for-size(desktop) {
     width: 10000%;
     height: 1px;
@@ -176,6 +185,7 @@
     left: -1000%;
   }
 }
+
 .our-program-item {
   position: relative;
   /*   outline: 1px solid green; */
