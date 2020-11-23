@@ -58,11 +58,9 @@
     text-align: left;
     margin-bottom: 30px;
     @include for-size(tablet) {
-      padding-top: 20px;
       font-size: 26px;
     }
     @include for-size(desktop) {
-      padding-top: 70px;
       font-size: 58px;
     }
   }
