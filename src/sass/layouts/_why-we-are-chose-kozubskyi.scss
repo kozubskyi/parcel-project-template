@@ -2,26 +2,26 @@
   padding-top: 70px;
   background-image: linear-gradient(
     to bottom,
-    $primary-black-color 80%,
-    $white-color 80%
+    $primary-black-color 67%,
+    $white-color 67%
   );
 
   @include for-size(tablet) {
     padding-top: 30px;
     background-image: linear-gradient(
       to bottom,
-      $primary-black-color 67%,
-      $white-color 67%
+      $primary-black-color 50%,
+      $white-color 50%
     );
   }
 
   @include for-size(desktop) {
     padding-top: 0px;
-    background-image: linear-gradient(
-      to bottom,
-      $primary-black-color 77%,
-      $white-color 77%
-    );
+    // background-image: linear-gradient(
+    //   to bottom,
+    //   $primary-black-color 50%,
+    //   $white-color 50%
+    // );
   }
 }
 
@@ -45,8 +45,15 @@
   }
 
   @include for-size(desktop) {
-    display: none;
-    margin-bottom: 70px;
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+    // margin-bottom: 70px;
   }
 }
 
