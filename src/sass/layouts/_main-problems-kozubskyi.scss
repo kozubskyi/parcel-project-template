@@ -15,29 +15,29 @@
 
   @include for-size(desktop) {
     position: relative;
-    background-image: linear-gradient(
-      to bottom,
-      $primary-black-color 77%,
-      $white-color 77%
-    );
+    background-image: url(../images/icons/group-bomba.svg),
+      linear-gradient(to bottom, $primary-black-color 77%, $white-color 77%);
+    background-repeat: no-repeat;
+    background-position: right;
+    fill: rgba(122, 34, 34, 0.6);
   }
 
-  &::before {
-    display: none;
+  // &::before {
+  //   display: none;
 
-    @include for-size(desktop) {
-      display: block;
-      content: '';
-      background-image: url(../images/icons/bomba.svg);
-      background-repeat: no-repeat;
-      position: absolute;
-      // background-size: contain;
-      width: 455px;
-      height: 472px;
-      bottom: 23%;
-      right: -50px;
-    }
-  }
+  //   @include for-size(desktop) {
+  //     display: block;
+  //     content: '';
+  //     background-image: url(../images/icons/bomba.svg);
+  //     background-repeat: no-repeat;
+  //     position: absolute;
+  //     // background-size: contain;
+  //     width: 455px;
+  //     height: 472px;
+  //     bottom: 23%;
+  //     right: -50px;
+  //   }
+  // }
 }
 
 .main-problems-container {
