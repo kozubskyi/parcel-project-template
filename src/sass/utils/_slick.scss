@@ -83,6 +83,7 @@
 
   .slick-initialized & {
     display: block;
+    outline: none;
 
     @include for-size(tablet) {
       display: flex;
