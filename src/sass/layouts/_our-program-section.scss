@@ -2,7 +2,7 @@
   position: relative;
   background-color: $primary-black-color;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
 
   @include for-size(tablet) {
     padding-top: 60px;
@@ -233,7 +233,11 @@
 .our-program-img-tablet {
   position: relative;
 } */
+
 @include for-size(mobile-only){
+/* .our-program-img-mobile {
+  position: relative;
+} */
 .our-program-img-mobile:before {
   content: '';
   position: absolute;
@@ -243,7 +247,7 @@
 
   height: 137px;
   width: 176px;
-  top: 0;
+  top: 47px;
   right: -20px;
 }
 }
@@ -279,7 +283,7 @@
 /*       float: right; */
       height: 502px;
       width: 760px;
-      bottom: -312px;
+      top:0px;
       right: 0px;
       z-index: -1;
     }
