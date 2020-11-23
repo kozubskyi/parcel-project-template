@@ -56,12 +56,21 @@ $(document).ready(function () {
   // focusOnSelect: true
   });
   
+$(window).resize(function() {
+    width = $(window).width();
+    if (width >= 1354) {
+    new WOW().init({
 
-  new WOW().init({
+boxClass:     'wow',      // default
+animateClass: 'animated', // default
+offset:       0,          // default
+mobile:       true,       // default
+live:         true        // default
     
   });
+    }
+});
 
-    
 });
 
 
