@@ -44,20 +44,26 @@
 }
 
 .container-name-title {
+  color: $white-color;
+
   font-weight: 800;
   font-size: 20px;
   line-height: 1.36;
   letter-spacing: 0.03em;
-  color: $white-color;
-  margin-bottom: 27px;
+
   padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media screen and (max-width: 480px) {
     font-weight: 800;
-    font-size: 26px;
-    line-height: 1.3;
+    font-size: 20px;
+    line-height: 1.36;
     letter-spacing: 0.03em;
-    text-align: start;
+
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media screen and (min-width: 768px) {
@@ -87,9 +93,8 @@
   content: '0' counter(section);
   color: $orange-color;
   position: absolute;
-  top: -15px;
-  left: 35px;
-  margin-bottom: 10px;
+  top: 5px;
+  left: 55px;
 
   @media screen and (min-width: 1354px) {
     font-size: 20px;
@@ -97,24 +102,65 @@
 }
 
 .number-item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.429;
+  letter-spacing: 0.08em;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   position: relative;
+
+  @media screen and (max-width: 480px) {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.429;
+    letter-spacing: 0.08em;
+  }
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 20px) / 2);
-    // margin-right: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.429;
+    letter-spacing: 0.08em;
+    margin-right: 20px;
   }
 
   @media screen and (min-width: 1354px) {
-    width: calc((100% - 20px) / 3);
-    // margin-right: 20px;
+    width: calc((100% - 80px) / 3);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.429;
+    letter-spacing: 0.08em;
+    margin-right: 40px;
   }
 }
 
-// .number-item:nth-child(2n) {
-//   @media screen and (min-width: 768px) and (max-width: 1354px) {
-//     margin-right: 0;
-//   }
-// }
+.number-item:nth-child(2n) {
+  @media screen and (min-width: 768px) and (max-width: 1354px) {
+    margin-right: 0;
+  }
+}
+
+.number-item:nth-child(3n) {
+  @media screen and (min-width: 1355px) {
+    margin-right: 0;
+  }
+}
+.number-item:nth-child(n + 5) {
+  @media screen and (min-width: 768px) and (max-width: 1354px) {
+    padding-bottom: 0;
+  }
+}
+
+.number-item:nth-child(n + 4) {
+  @media screen and (min-width: 1354px) {
+    padding-bottom: 0;
+  }
+}
 
 // .number-item:nth-child(3n) {
 //   @media screen and (min-width: 1354px) {
@@ -129,36 +175,7 @@
   width: 20px;
   background-color: $orange-color;
   position: absolute;
-  top: -5px;
-}
-
-.item-position {
-  margin-top: 15px;
-  margin-bottom: 30px;
-
-  padding-top: 10px;
-  padding-bottom: 5px;
-
-  @media screen and (max-width: 480px) {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.429;
-    letter-spacing: 0.08em;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.429;
-    letter-spacing: 0.08em;
-  }
-
-  @media screen and (min-width: 1354px) {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.4;
-    letter-spacing: 0.08em;
-  }
+  top: 13px;
 }
 
 .list-item {
@@ -168,13 +185,14 @@
   background-color: $white-color;
   width: 100%;
 
+  padding: 20px 30px;
+
   z-index: 1;
 
   @media screen and (max-width: 480px) {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
-    padding-bottom: -20px;
+    // padding-left: 30px;
+    // padding-right: 30px;
+    // padding-top: 20px;
   }
 
   @media screen and (min-width: 768px) {
@@ -185,8 +203,8 @@
 
     padding-left: 96px;
     padding-right: 96px;
-    padding-top: 44px;
-    padding-bottom: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   @media screen and (min-width: 1354px) {
@@ -195,10 +213,17 @@
 
     padding-left: 114px;
     padding-right: 114px;
-    padding-top: 84px;
-    padding-bottom: 26px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
+
+// @media screen and (min-width: 1350px) {
+//   .number-item:nth-child(5) {
+//     margin-bottom: 0;
+//     background-color: green;
+//   }
+// }
 
 .qwert {
   white-space: nowrap;
