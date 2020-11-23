@@ -48,21 +48,23 @@ $(document).ready(function () {
       }
       
   ]
-  // slidesToShow: 3,
-  // slidesToScroll: 1,
-  // asNavFor: '#reviews-slider',
-  // dots: false,
-  // centerMode: false,
-  // focusOnSelect: true
   });
-  
 
-  new WOW().init({
+  width = $(window).width();
+    if (width >= 1354) {
+    new WOW().init({
+
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       true,       // default
+    live:         true        // default
     
-  });
-
+  })};
     
 });
+
+
 
 
 

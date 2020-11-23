@@ -60,7 +60,9 @@
 }
 
 .why-we-are-chose-card {
-  background-color: white;
+  position: relative;
+  z-index: 1;
+  background-color: $white-color;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
   padding: 20px 30px;
