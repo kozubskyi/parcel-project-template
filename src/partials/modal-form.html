@@ -1,0 +1,55 @@
+<div data-modal class="backdrop is-hidden">
+    <form class="modal-form">
+        <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <div class="form-field">
+            <label class="form-label" for="name">
+                <input class="form-input" type="text" name="name" id="name">
+                <span class="input-name">Имя</span>
+                <svg class="form-logo">
+                    <use href="./images/icons/forms-sprite.svg#icon-name"></use>
+                </svg>
+
+            </label>
+        </div>
+        <div class="form-field">
+            <label class="form-label" for="pfone">
+                <span class="input-name">Телефон</span>
+                <svg class="form-logo">
+                    <use href="./images/icons/forms-sprite.svg#icon-phone"></use>
+                </svg>
+                <input class="form-input" type="tel" name="pfone" id="pfone">
+            </label>
+        </div>
+        <div class="form-field">
+            <label class="form-label" for="mail">
+                <span class="input-name">Почта</span>
+                <svg class="form-logo">
+                    <use href="./images/icons/forms-sprite.svg#icon-mail"></use>
+                </svg>
+                <input class="form-input" type="email" name="mail" id="mail">
+            </label>
+        </div>
+        <div class="form-field">
+            <label class="form-label" for="coments">
+                <span class="input-name">Комментарий</span>
+                <textarea class="form-textarea" name="coments" id="coments" cols="30" rows="10" placeholder="Введите текст"></textarea>
+            </label>
+        </div>
+        <label class="checkbox-label" for="agreements">
+            <input class="form-checkbox visually-hidden" type="checkbox" name="agreements" id="agreements">
+            <span class="checkbox-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="">Условия договора</a>
+
+        </label>
+
+
+        <button class="form-button" type="submit">Отправить</button>
+        <button type="button" class="modal-button" data-modal-close>
+            <svg class="close-logo">
+                <use href="./images/icons/forms-sprite.svg#icon-escape"></use>
+            </svg>
+        </button>
+    </form>
+
+</div>
