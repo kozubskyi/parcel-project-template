@@ -10,6 +10,7 @@
 
 <body class="body" data-body>
   <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+  
   <include src="./partials/header.html"></include>
 
   <main>
@@ -26,17 +27,23 @@
     <include src="./partials/graduates-reviews.html"></include>
     <include src="./partials/modal-form.html"></include>
   </main>
-
-  <include src="./partials/footer.html"></include>
-
-  <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-  <script src="./index.js"></script>
-  <script src="./js/modal.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
-  <script src="./js/slick.js"></script>
-  <script src="./js/slow-scroll.js"></script>
-
-</body>
-
+  
+    <include src="./partials/footer.html"></include>
+  
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"> </script>
+     <script
+    src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"
+      type="text/javascript"
+    ></script>
+   
+    <script src="./js/slow-scroll.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/slick.js"></script>
+    
+  </body>
+  
 </html>
+

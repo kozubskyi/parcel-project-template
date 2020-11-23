@@ -17,6 +17,26 @@
   }
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 6;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $white-color;
+  background-size: cover;
+}
+
+.header.is-open {
+  z-index: 11;
+  background-color: rgba(17, 21, 24, 0.95);
+  border-bottom: none;
+
+  & .header-logo {
+    fill: $white-color;
+  }
+}
+
 .header-logo {
   position: relative;
   z-index: 10;
@@ -26,9 +46,6 @@
       width: 128px;
       height: 45px;
     }
-  }
-  &.is-open {
-    fill: $white-color;
   }
 }
 
@@ -98,7 +115,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  padding-top: 110px;
+  padding-top: 159px;
   text-align: center;
   background-color: rgba(17, 21, 24, 0.95);
 
