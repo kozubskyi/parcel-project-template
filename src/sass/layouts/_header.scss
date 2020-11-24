@@ -137,6 +137,13 @@
       margin-right: auto;
     }
   }
+  .item {
+    @include for-size(mobile) {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
 
   .link {
     font-weight: 800;
