@@ -117,6 +117,7 @@
   // font-size: 14px;
   line-height: 1.21;
   letter-spacing: 0.08em;
+  outline: none;
   background-color: transparent;
   max-width: 280px;
 
@@ -126,6 +127,16 @@
 
   &::placeholder {
     color: white;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:focus {
+    border: 1px solid $orange-color;
+    outline-color: $orange-color;
+
+    &::placeholder {
+      color: $orange-color;
+    }
   }
 
   @include for-size(tablet) {
@@ -234,6 +245,11 @@
   line-height: 1.21;
 
   margin-bottom: 30px;
+
+  &:hover,
+  &:focus {
+    color: $orange-color;
+  }
 
   @include for-size(tablet) {
     font-size: 20px;

@@ -5,12 +5,20 @@
   line-height: 1.25;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  border: none;
+  border: 2px solid transparent;
 
   padding: 17px 9px;
   color: white;
   background-color: $orange-color;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border: 2px solid $orange-color;
+    color: $orange-color;
+    outline: none;
+  }
 
   @include for-size(desktop) {
     font-size: 14px;
