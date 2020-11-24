@@ -23,6 +23,8 @@
           type="text"
           name="name"
           placeholder="Имя*"
+          pattern="[A-Za-zА-Яа-яЁё]+$"
+          required
         />
         <input
           class="footer-form-input wow animate__rollIn"
@@ -30,6 +32,8 @@
           type="tel"
           name="tel"
           placeholder="Телефон*"
+          pattern="\+38[0-9]{10}|38[0-9]{10}|[0-9]{10}"
+          required
         />
       </form>
       <button
