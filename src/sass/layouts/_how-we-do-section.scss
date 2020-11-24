@@ -52,14 +52,17 @@
 
   @include for-size(mobile) {
     width: calc(100% - 2 * 10px);
+    max-width: 280px;
   }
 
   @include for-size(tablet) {
     width: calc((100% - 4 * 10px) / 2);
+    max-width: 334px;
   }
 
   @include for-size(desktop) {
     width: calc((100% - 6 * 10px) / 3);
+    max-width: 425px;
   }
 }
 
