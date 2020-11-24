@@ -9,6 +9,7 @@
          jQuery(".body").removeClass("is-active");
          jQuery(".header-logo").removeClass("is-open");
          jQuery(".burger-button").removeClass("is-open is-active");
+         jQuery(".header").removeClass("is-open");
          return false;
      });
  });

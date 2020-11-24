@@ -2,7 +2,7 @@
   position: relative;
   background-color: $primary-black-color;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
 
   @include for-size(tablet) {
     padding-top: 60px;
@@ -10,7 +10,8 @@
   }
   @include for-size(desktop) {
     padding-top: 120px;
-    padding-bottom: 363px;
+    padding-bottom: 164px;
+    z-index: 0;
   }
 
   .our-program-list {
@@ -195,7 +196,7 @@
     }
   }
 
-  .our-program-image-mobile {
+/*   .our-program-image-mobile {
     display: none;
     @include for-size(mobile-only) {
       display: block;
@@ -226,27 +227,69 @@
       height: 502px;
       width: 760px;
     }
-  }
-}
-/* .our-program-img {
-  position: relative;
-}
-.our-program-img:before {
+  } */
 
-  content: '';
-  position: absolute;
-  background-image: url(../images/mobile/program@x1.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 137px;
-  width: 176px;
-  top: 0;
-  right: 0;
-  opacity: 0.5;
-  z-index: 999;
+/* .our-program-img,
+.our-program-img-tablet {
+  position: relative;
 } */
 
+@include for-size(mobile-only){
+/* .our-program-img-mobile {
+  position: relative;
+} */
+.our-program-img-mobile:before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/mobile/program-mob@x1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 137px;
+  width: 176px;
+  top: 47px;
+  right: -20px;
+  z-index: 2;
+}
+}
+
+@include for-size(tablet-only){
+  @include for-size(tablet){
+  .our-program-img-tablet:before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/tablet/program-tabl@x1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 280px;
+    width: 384px;
+    top: -26px;
+    right: -20px;
+
+  }
+  }}
+
+
+  @include for-size(desktop){
+    .our-program-img-desktop {
+      position: relative;
+    }
+    .our-program-img-desktop:before {
+      content: '';
+      position: absolute;
+      background-image: url(../images/desctop/program-desk@x1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+/*       float: right; */
+      height: 502px;
+      width: 760px;
+      top: 9px;
+      right: 0px;
+      z-index: -1;
+    }
+  }
+}
 /* .our-program-item {
   padding-left: 26px;
 }

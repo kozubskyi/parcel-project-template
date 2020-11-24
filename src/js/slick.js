@@ -1,33 +1,5 @@
 $(document).ready(function () {
-    
-//     $('#reviews-slider').slick({
-//         //   rtl: true
-//         asNavFor: '#gallery'
-//     });
-//     $('#gallery').slick({
-//          responsive: [
-//     {
-//       breakpoint: 768,
-//       settings: {
-//         arrows: false,
-//         centerMode: false,
-//         infinite: true,
-//           slidesToShow: 3,
-//             slidesToScroll: 3
-//       }
-//              },
-//                 {
-//       breakpoint: 2000,
-//       settings: {
-//         arrows: false,
-//           centerMode: false,
-//         infinite: false,
-//           slidesToShow: 7,
-//             slidesToScroll: 3,
-//       }
-//              }
-//   ]
-//     });
+
     
     
   $('#reviews-slider').slick({
@@ -76,16 +48,23 @@ $(document).ready(function () {
       }
       
   ]
-  // slidesToShow: 3,
-  // slidesToScroll: 1,
-  // asNavFor: '#reviews-slider',
-  // dots: false,
-  // centerMode: false,
-  // focusOnSelect: true
-});
+  });
+
+  width = $(window).width();
+    if (width >= 1354) {
+    new WOW().init({
+
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       true,       // default
+    live:         true        // default
     
+  })};
     
 });
+
+
 
 
 
