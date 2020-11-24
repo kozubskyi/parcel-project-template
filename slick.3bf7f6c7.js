@@ -155,15 +155,26 @@ $(document).ready(function () {
         slidesToShow: 6,
         slidesToScroll: 1
       }
-    }] // slidesToShow: 3,
-    // slidesToScroll: 1,
-    // asNavFor: '#reviews-slider',
-    // dots: false,
-    // centerMode: false,
-    // focusOnSelect: true
-
+    }]
   });
-  new WOW().init({});
+  width = $(window).width();
+
+  if (width >= 1354) {
+    new WOW().init({
+      boxClass: 'wow',
+      // default
+      animateClass: 'animated',
+      // default
+      offset: 0,
+      // default
+      mobile: true,
+      // default
+      live: true // default
+
+    });
+  }
+
+  ;
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -193,7 +204,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59318" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54163" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

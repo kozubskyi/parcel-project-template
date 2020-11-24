@@ -4236,19 +4236,19 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 @media (min-width: 768px) {
   .header-nav {
-    padding-top: 41px;
-    padding-bottom: 41px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 @media (min-width: 1354px) {
   .header-nav {
-    padding-top: 46px;
-    padding-bottom: 46px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 .header-nav .list {
@@ -4375,7 +4375,7 @@ img {
 
 .hero {
   position: relative;
-  padding-top: 100px;
+  padding-top: 110px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left bottom -20px;
@@ -4388,6 +4388,7 @@ img {
 }
 @media (min-width: 768px) {
   .hero {
+    padding-top: 158px;
     background-image: url(/hero-bg-tabl@x1.75357d6b.png);
   }
 }
@@ -4398,6 +4399,7 @@ img {
 }
 @media (min-width: 1354px) {
   .hero {
+    padding-top: 229px;
     background-image: url(/hero-bg@x1.6df8e3ec.png);
   }
 }
@@ -4412,13 +4414,11 @@ img {
 }
 @media (min-width: 768px) {
   .hero .title {
-    padding-top: 20px;
     font-size: 26px;
   }
 }
 @media (min-width: 1354px) {
   .hero .title {
-    padding-top: 70px;
     font-size: 58px;
   }
 }
@@ -4443,18 +4443,15 @@ img {
   }
 }
 .hero .container {
-  padding-top: 15px;
   padding-bottom: 50px;
 }
 @media (min-width: 768px) {
   .hero .container {
-    padding-top: 30px;
     padding-bottom: 93px;
   }
 }
 @media (min-width: 1354px) {
   .hero .container {
-    padding-top: 80px;
     padding-bottom: 145px;
   }
 }
@@ -5329,7 +5326,8 @@ img {
 }
 
 .why-we-are-chose-card {
-  background-color: white;
+  position: relative;
+  background-color: #ffffff;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
   padding: 20px 30px;
 }
@@ -5584,7 +5582,7 @@ img {
 
 @media (max-width: 767px) {
   .we-garant-section {
-    background-image: linear-gradient(to bottom, #ffffff 5%, #ffffff 5%, #f1f1f1f1 10%, #f1f1f1f1 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 15%, #f1f1f1f1 15%, #f1f1f1f1 100%);
   }
 }
 
