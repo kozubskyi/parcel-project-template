@@ -23,7 +23,7 @@
           type="text"
           name="name"
           placeholder="Имя*"
-          pattern="^[А-Яа-яЁё\s]+$"
+          pattern="[A-Za-zА-Яа-яЁё]+$"
           required
         />
         <input
@@ -32,7 +32,7 @@
           type="tel"
           name="tel"
           placeholder="Телефон*"
-          pattern="[0-9]{10,}"
+          pattern="\+38[0-9]{10}|38[0-9]{10}|[0-9]{10}"
           required
         />
         <button
