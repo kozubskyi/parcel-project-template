@@ -132,16 +132,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     menuBtnRef.classList.toggle("is-open");
     menuBtnRef.setAttribute("aria-expanded", !expanded);
     mobileMenuRef.classList.toggle("is-open");
-  }); //   const refs = {
-  //     openModalBtn: document.querySelector('[data-modal-open]'),
-  //     closeModalBtn: document.querySelector('[data-modal-close]'),
-  //     modal: document.querySelector('[data-modal]'),
-  //   };
-  //   refs.openModalBtn.addEventListener('click', toggleModal);
-  //   refs.closeModalBtn.addEventListener('click', toggleModal);
-  //   function toggleModal() {
-  //     refs.modal.classList.toggle('is-hidden');
-  //   }
+  });
+  var refs = {
+    openModalBtn: document.querySelector('[data-modal-open]'),
+    closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]')
+  };
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+  }
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -171,7 +173,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63013" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64068" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
