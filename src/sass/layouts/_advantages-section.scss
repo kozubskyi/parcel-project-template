@@ -1,31 +1,84 @@
 .advantages {
   padding-top: 30px;
   padding-bottom: 49.5px;
-}
+  @include for-size(tablet){
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include for-size(desktop){
+      padding-top: 96.5px;
+      padding-bottom: 130px;
+    }
+  }
 
-.advantages-title {
+  @include for-size(mobile-only) {
+    .advantages-item {
+      width: calc((100% - 10px) * 2 / 3);
+      margin-left: auto;
+    }
+  
+    .advantages-item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  
+  @include for-size(tablet) {
+    .advantages-list {
+      display: flex;
+      justify-content: center;
+    } 
+    .advantages-item {
+      margin-left: 75px;
+      width: calc((100% - 21px * 2) / 3);
+    }
+    .advantages-item:not(:first-child){
+      margin-left: 96px;
+    }
+    @include for-size(desktop) {
+      .advantages-item {
+        width: calc(100% - 30px * 2 / 3);
+      }
+    } 
+    }
+.advantages-block {
   position: relative;
-  margin: 0px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  @include for-size(desktop){
+    height: 102px;
+  }
+}
+.advantages-title {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.43;
-
-  display: flex;
-  align-items: center;
   color: $primary-black-color;
+  @include for-size(desktop){
+    font-size: 20px;
+    line-height: 1.64;
+  }
 }
 
-.advantages-title:before {
+.advantages-svg-man:before,
+.advantages-svg-phone:before,
+.advantages-svg-dollar:before {
   position: absolute;
-  display: block;
-  content: '';
+  content: "";
+  width: 59px;
+  height: 60px;
+  left: -70px;
 
   background-size: contain;
+
   background-repeat: no-repeat;
-  background-position: center;
-  height: 60px;
-  width: 59px;
-  margin-right: 10px;
+
+  @include for-size(tablet){
+    left: -75px;
+  }
+  @include for-size(desktop){
+    width: 100px;
+    height: 102px;
+  }
 }
 
 .advantages-svg-man:before {
@@ -38,72 +91,7 @@
   background-image: url(../images/icons/dollar.svg);
 }
 
-/* .advantages-svg {
-  margin-right: 10px;
-
-  height: 60px;
-  fill: $orange-color;
-} */
-
-@include for-size(mobile-only) {
-  .advantages-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: calc((100% - 10px) * 2 / 3);
-    margin-left: auto;
-  }
-  .advantages-item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-  .advantages-list {
-    margin: 0 auto;
-  }
-  .advantages-title:before {
-    left: -69px;
-  }
-}
-
-@include for-size(tablet) {
-  .advantages-list {
-    display: flex;
-    justify-content: center;
-  }
-  .advantages-item {
-    display: flex;
-    width: calc((100% - 21px * 2) / 3);
-  }
-
-  .advantages-svg-man {
-    margin-left: 68px;
-  }
-  .advantages-svg-phone,
-  .advantages-svg-dollar {
-    margin-left: 96px;
-  }
-  .advantages-title:before {
-    left: -74px;
-  }
-  .advantages {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-}
-
-@include for-size(desktop) {
-  .advantages-item {
-    width: calc(100% / 3);
-  }
-  .advantages-title:before {
-    margin-right: -82px;
-    height: 100px;
-    width: 102px;
-  }
-  .advantages-title {
-    font-size: 20px;
-    line-height: 1.64;
-  }
+@include for-size(desktop){
   .advantages-svg-man:before {
     background-image: url(../images/icons/man-desktop.svg);
   }
@@ -113,8 +101,5 @@
   .advantages-svg-dollar:before {
     background-image: url(../images/icons/dollar-desktop.svg);
   }
-  .advantages {
-    padding-top: 96.5px;
-    padding-bottom: 130px;
-  }
+}
 }
