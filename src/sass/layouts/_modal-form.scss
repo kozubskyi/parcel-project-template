@@ -191,27 +191,7 @@ body.modal-open {
   }
 }
 
-.close-logo {
-  fill: $white-color;
-
-  width: 15px;
-  height: 15px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  .modal-button:hover & {
-    fill: $orange-color;
-  }
-}
-
-.modal-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  border: none;
-  background-color: transparent;
+.backdrop .footer-form-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
