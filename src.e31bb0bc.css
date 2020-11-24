@@ -4800,7 +4800,7 @@ img {
   .number-item {
     width: calc((100% - 80px) / 3);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.429;
     letter-spacing: 0.08em;
     margin-right: 40px;
@@ -6174,14 +6174,12 @@ img {
 
 .backdrop {
   z-index: 100;
-  padding: 15px;
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  transition-duration: 300ms;
+  background-color: rgba(17, 21, 24, 0.95);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -6190,44 +6188,25 @@ img {
   pointer-events: none;
 }
 
-.form-logo {
-  width: 15px;
-  height: 15px;
-  fill: #111518;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 15px;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-label:focus-within .form-logo {
-  fill: #ff6b09;
-}
-
-.input-name {
-  position: absolute;
-  left: 0px;
-  top: -4px;
-  transform: translateY(-100%);
+body.modal-open {
+  overflow: hidden;
 }
 
 .modal-form {
+  padding: 40px 20px;
   position: relative;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ffffff;
-  padding: 39px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   text-align: center;
-  max-width: 528px;
+  max-width: 500px;
   max-height: 609px;
 }
 @media (min-width: 768px) {
   .modal-form {
+    padding: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -6236,30 +6215,32 @@ img {
 }
 @media (min-width: 1354px) {
   .modal-form {
-    min-width: 600px;
-    min-height: 650px;
+    max-width: 530px;
+    max-height: 700px;
   }
 }
 
 .form-title {
+  color: #ffffff;
   font-size: 14px;
-  line-height: 1.15;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
+  font-weight: 800;
 }
 .form-title .orange {
   color: #ff6b09;
 }
 @media (min-width: 768px) {
   .form-title {
-    font-size: 15px;
+    font-size: 26px;
+    line-height: 1.3;
   }
 }
 @media (min-width: 1354px) {
   .form-title {
-    line-height: 1.15;
-    font-size: 20px;
+    margin-bottom: 50px;
   }
 }
 
@@ -6270,6 +6251,11 @@ img {
   text-align: left;
   margin-bottom: 28px;
 }
+@media (min-width: 768px) {
+  .form-field {
+    margin-bottom: 35px;
+  }
+}
 
 .form-field:last-of-type {
   margin-bottom: 0px;
@@ -6279,48 +6265,63 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  padding: 0px 0px 0px 42px;
+  line-height: 1.21;
+  letter-spacing: 0.08em;
+  outline: none;
+  padding: 15px 28px;
   min-height: 40px;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  border: 1px solid #ffffff;
+  max-width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #ffffff;
+  background-color: transparent;
 }
-.form-input:focus {
-  outline-color: #ff6b09;
+.form-input[required]:not(:placeholder-shown):invalid {
+  border: 1px solid red;
+}
+.form-input:not(:placeholder-shown):valid {
+  border: 1px solid lime;
 }
 .form-input::placeholder {
-  color: rgba(117, 117, 117, 0.5);
+  color: #ffffff;
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.form-textarea {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  min-height: 120px;
-  padding: 12px 16px;
-  resize: none;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-textarea:focus {
+.form-input:focus {
+  border: 1px solid #ff6b09;
   outline-color: #ff6b09;
 }
-.form-textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
+.form-input:focus::placeholder {
+  color: #ff6b09;
+}
+@media (min-width: 768px) {
+  .form-input {
+    max-width: 390px;
+  }
+}
+@media (min-width: 1354px) {
+  .form-input {
+    max-width: 478px;
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 22px 40px;
+  }
 }
 
 .checkbox-label {
   display: inline-block;
   align-items: center;
   justify-content: center;
+  color: #ffffff;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.76;
   margin-top: 20px;
   margin-bottom: 30px;
-  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (min-width: 1354px) {
@@ -6332,7 +6333,6 @@ img {
 
 .checkbox-label a {
   color: #ff6b09;
-  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -6342,8 +6342,6 @@ img {
   width: 16px;
   height: 15px;
   border: 2px solid #ff6b09;
-  border-radius: 2px;
-  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-checkbox:checked + .checkbox-icon {
@@ -6355,40 +6353,50 @@ img {
 }
 
 .form-button {
+  display: inline-block;
   color: #ffffff;
   background-color: #ff6b09;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 16px;
-  border: 0px;
-  line-height: 1.875;
-  padding: 10px 55px;
+  border: 2px solid transparent;
+  line-height: 1.25;
+  padding: 17px 7px;
   text-transform: uppercase;
   min-width: 200px;
   letter-spacing: 0.08em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.form-button:hover, .form-button:focus {
+  background-color: transparent;
+  border: 2px solid #ff6b09;
+  color: #ff6b09;
+  outline: none;
+}
+@media (min-width: 1354px) {
+  .form-button {
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.14em;
+    padding: 27px 25px;
+  }
 }
 
-.close-logo {
-  width: 15px;
-  height: 15px;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-button:hover .close-logo {
-  fill: #ff6b09;
+.backdrop .footer-form-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .modal-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
   width: 30px;
   height: 30px;
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  border: none;
-  background-color: #ffffff;
+  border-radius: 50%;
+  font-weight: 900;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .footer-form-bg-container {
@@ -6530,6 +6538,12 @@ img {
 }
 .footer-form-input:focus::placeholder {
   color: #ff6b09;
+}
+.footer-form-input:valid {
+  border: 1px solid lime;
+}
+.footer-form-input:invalid:not(:placeholder-shown) {
+  border: 1px solid red;
 }
 @media (min-width: 768px) {
   .footer-form-input {
