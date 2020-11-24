@@ -15,18 +15,10 @@
     padding-bottom: 50px;
     text-align: center;
 
-<<<<<<< Updated upstream
     // @include for-size(tablet) {
     //   text-align: start;
     // }
 
-=======
-    @include for-size(tablet) {
-      & {
-        text-align: start;
-      }
-    }
->>>>>>> Stashed changes
     @include for-size(desktop) {
       padding-top: 130px;
       padding-bottom: 130px;
@@ -88,11 +80,7 @@
 
     @include for-size(tablet) {
       margin-bottom: 0;
-<<<<<<< Updated upstream
       text-align: center;
-=======
-      // width: 100%;
->>>>>>> Stashed changes
     }
   }
 
@@ -189,12 +177,14 @@
   .vk-slider-link {
     display: block;
   }
-  .slick-slide:hover {
-    cursor: pointer;
-  }
+
   .slick-current {
     .bottom-slider-img {
       border: 1px solid $orange-color;
     }
+  }
+
+  .bottom-slider-img:hover {
+    cursor: pointer;
   }
 }
