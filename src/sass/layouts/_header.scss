@@ -116,7 +116,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  padding-top: 159px;
+  padding-top: 140px;
   text-align: center;
   background-color: rgba(17, 21, 24, 0.95);
 
@@ -127,10 +127,10 @@
 
   .list {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     padding-left: 0;
 
-    text-align: left;
+    text-align: center;
 
     @include for-size(tablet) {
       display: inline-block;
@@ -139,11 +139,7 @@
     }
   }
   .item {
-    @include for-size(mobile) {
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
-    }
+    margin-bottom: 25px;
   }
 
   .link {
