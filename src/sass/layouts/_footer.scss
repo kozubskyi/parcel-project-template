@@ -125,6 +125,8 @@
   padding: 15px 28px;
   color: white;
 
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &::placeholder {
     color: white;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -137,6 +139,14 @@
     &::placeholder {
       color: $orange-color;
     }
+  }
+
+  &:valid {
+    border: 1px solid rgb(0, 255, 0);
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 1px solid rgb(255, 0, 0);
   }
 
   @include for-size(tablet) {

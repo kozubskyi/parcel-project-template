@@ -23,6 +23,8 @@
           type="text"
           name="name"
           placeholder="Имя*"
+          pattern="^[А-Яа-яЁё\s]+$"
+          required
         />
         <input
           class="footer-form-input wow animate__rollIn"
@@ -30,15 +32,17 @@
           type="tel"
           name="tel"
           placeholder="Телефон*"
+          pattern="[0-9]{10,}"
+          required
         />
+        <button
+          type="submit"
+          class="button footer-button wow animate__rollIn"
+          data-wow-duration="1s"
+        >
+          Хочу на бесплатное занятие
+        </button>
       </form>
-      <button
-        type="submit"
-        class="button footer-button wow animate__rollIn"
-        data-wow-duration="1s"
-      >
-        Хочу на бесплатное занятие
-      </button>
     </div>
   </div>
   <div class="footer-logo-bg-container">
