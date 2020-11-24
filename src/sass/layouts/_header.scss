@@ -25,6 +25,7 @@
   transform: translateX(-50%);
   background-color: $white-color;
   background-size: cover;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.15);
 }
 
 .header.is-open {
@@ -115,7 +116,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  padding-top: 159px;
+  padding-top: 140px;
   text-align: center;
   background-color: rgba(17, 21, 24, 0.95);
 
@@ -126,16 +127,19 @@
 
   .list {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     padding-left: 0;
 
-    text-align: left;
+    text-align: center;
 
     @include for-size(tablet) {
       display: inline-block;
       margin-left: auto;
       margin-right: auto;
     }
+  }
+  .item {
+    margin-bottom: 25px;
   }
 
   .link {
