@@ -7,7 +7,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
-  transition-duration: 250ms;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -24,7 +24,7 @@
   top: 50%;
   transform: translateY(-50%);
   left: 15px;
-  transition-duration: 250ms;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   .form-label:focus-within & {
     fill: $orange-color;
@@ -110,7 +110,7 @@
   border-radius: 4px;
   padding: 0px 0px 0px 42px;
   min-height: 40px;
-  transition-duration: 250ms;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:focus {
     outline-color: $orange-color;
@@ -123,7 +123,7 @@
   min-height: 120px;
   padding: 12px 16px;
   resize: none;
-  transition-duration: 250ms;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:focus {
     outline-color: $orange-color;
@@ -142,7 +142,7 @@
   line-height: 1.16;
   margin-top: 20px;
   margin-bottom: 30px;
-  transition-duration: 250ms;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   @include for-size(desktop) {
     font-size: 14px;
@@ -152,7 +152,7 @@
 
 .checkbox-label a {
   color: $orange-color;
-  transition-duration: 250ms;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -163,7 +163,7 @@
   height: 15px;
   border: 2px solid $orange-color;
   border-radius: 2px;
-  transition-duration: 250ms;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   .form-checkbox:checked + & {
@@ -192,7 +192,7 @@
 .close-logo {
   width: 15px;
   height: 15px;
-  transition-duration: 250ms;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   .modal-button:hover & {
     fill: $orange-color;
