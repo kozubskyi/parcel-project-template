@@ -3,40 +3,24 @@
         <h2 class="form-title">Оставить заявку на участие в <span class="orange">бесплатном занятии</span> по английскому языку</h2>
         <div class="form-field">
             <label class="form-label" for="name">
-                <input class="form-input" type="text" name="name" id="name" placeholder="Алексей Геннадиевич" required>
-                <span class="input-name">Имя</span>
-                <svg class="form-logo">
-                    <use href="./images/icons/forms-sprite.svg#icon-name"></use>
-                </svg>
-
-            </label>
+                <input class="form-input" type="text" name="name" id="name" placeholder="Имя*" pattern="[A-Za-zА-Яа-яЁё]+$" required>
+                
+                            </label>
         </div>
         <div class="form-field">
             <label class="form-label" for="pfone">
-                <span class="input-name">Телефон</span>
-                <svg class="form-logo">
-                    <use href="./images/icons/forms-sprite.svg#icon-phone"></use>
-                </svg>
-                <input class="form-input" type="tel" name="pfone" id="pfone" placeholder="+380664881254" required>
+                
+                <input class="form-input" type="tel" name="pfone" id="pfone" placeholder="Телефон*" pattern="\+38[0-9]{10}|38[0-9]{10}|[0-9]{10}" required>
             </label>
         </div>
         <div class="form-field">
             <label class="form-label" for="mail">
-                <span class="input-name">Почта</span>
-                <svg class="form-logo">
-                    <use href="./images/icons/forms-sprite.svg#icon-mail"></use>
-                </svg>
-                <input class="form-input" type="email" name="mail" id="mail" placeholder="gmsaleksei@gmail.com" required>
+                
+                <input class="form-input" type="email" name="mail" id="mail" placeholder="Электронная почта*" required>
             </label>
         </div>
-        <div class="form-field">
-            <label class="form-label" for="coments">
-                <span class="input-name">Комментарий</span>
-                <textarea class="form-textarea" name="coments" id="coments" cols="30" rows="10" placeholder="Ваши вопросы и пожелания"></textarea>
-            </label>
-        </div>
-        <label class="checkbox-label" for="agreements">
-            <input class="form-checkbox visually-hidden" type="checkbox" name="agreements" id="agreements" required>
+            <label class="checkbox-label" for="agreements">
+            <input class="form-checkbox visually-hidden" type="checkbox" name="agreements" id="agreements" required checked>
             <span class="checkbox-icon"></span>
             Соглашаюсь на обработку
             <a href="https://zakon.rada.gov.ua/laws/show/2297-17#Text" target="_blank" rel="noopener noreferer">Персональны данных</a>
@@ -44,7 +28,7 @@
         </label>
 
 
-        <button class="form-button" type="submit">Отправить</button>
+        <button class="form-button" type="submit">хочу на бесплатное занятие</button>
         <button type="button" class="modal-button" data-modal-close>
             <svg class="close-logo">
                 <use href="./images/icons/forms-sprite.svg#icon-escape" width="15" height="15"></use>

@@ -6,36 +6,6 @@
   width: 100%;
   height: 100%;
   background-color: $primary-black-color;
-  background-image: url(../images/mobile/footer-mob@x1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url(../images/mobile/footer-mob@x2.png);
-  }
-
-  @include for-size(tablet) {
-    background-image: url(../images/tablet/footer-tabl@x1.png);
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url(../images/tablet/footer-tabl@x2.png);
-    }
-  }
-
-  @include for-size(desktop) {
-    background-image: url(../images/desctop/futer-desk@x1.png);
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url(../images/desctop/futer-desk@x2.png);
-    }
-  }
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -43,30 +13,11 @@
   opacity: 0;
   pointer-events: none;
 }
-
-.form-logo {
-  width: 15px;
-  height: 15px;
-  fill: $white-color;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 15px;
-  .form-label:focus-within & {
-    fill: $orange-color;
-  }
+body.modal-open {
+  overflow: hidden;
 }
-
-.input-name {
-  color: $white-color;
-  position: absolute;
-  left: 0px;
-  top: -4px;
-  transform: translateY(-100%);
-}
-
 .modal-form {
-  padding: 39px;
+  padding: 40px 20px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -75,37 +26,39 @@
   margin-right: auto;
 
   text-align: center;
-  max-width: 528px;
+  max-width: 500px;
   max-height: 609px;
 
   @include for-size(tablet) {
+    padding: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   @include for-size(desktop) {
-    min-width: 600px;
-    min-height: 650px;
+    max-width: 530px;
+    max-height: 700px;
   }
 }
 
 .form-title {
   color: $white-color;
   font-size: 14px;
-  line-height: 1.15;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
+  font-weight: 800;
   .orange {
     color: $orange-color;
   }
   @include for-size(tablet) {
-    font-size: 15px;
+    font-size: 26px;
+    line-height: 1.3;
   }
   @include for-size(desktop) {
-    line-height: 1.15;
-    font-size: 20px;
+    margin-bottom: 50px;
   }
 }
 
@@ -115,8 +68,10 @@
   letter-spacing: 0.01em;
   text-align: left;
   margin-bottom: 28px;
+  @include for-size(tablet) {
+    margin-bottom: 35px;
+  }
 }
-
 .form-field:last-of-type {
   margin-bottom: 0px;
 }
@@ -133,7 +88,7 @@
   letter-spacing: 0.08em;
   outline: none;
 
-  padding: 0px 0px 0px 42px;
+  padding: 15px 28px;
   min-height: 40px;
   width: 100%;
 
@@ -141,8 +96,15 @@
 
   color: $white-color;
   background-color: transparent;
+  &[required]:not(:placeholder-shown):invalid {
+    background-color: rgba(255, 0, 0, 0.651);
+  }
+  &:not(:placeholder-shown):valid {
+    border: 1px solid $orange-color;
+    outline-color: $orange-color;
+  }
   &::placeholder {
-    color: rgba(233, 230, 230, 0.6);
+    color: $white-color;
     transition: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -154,29 +116,12 @@
       color: $orange-color;
     }
   }
-}
+  @include for-size(desktop) {
+    max-width: 478px;
 
-.form-textarea {
-  // border-radius: 4px;
-  min-height: 120px;
-  padding: 12px 16px;
-  resize: none;
-  border: 1px solid $white-color;
-  outline: none;
-  color: $white-color;
-  background-color: transparent;
-  &::placeholder {
-    color: rgba(233, 230, 230, 0.6);
-    transition: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  &:focus {
-    border: 1px solid $orange-color;
-    outline-color: $orange-color;
-
-    &::placeholder {
-      color: $orange-color;
-    }
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 22px 40px;
   }
 }
 
@@ -186,7 +131,7 @@
   justify-content: center;
   color: $white-color;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.76;
   margin-top: 20px;
   margin-bottom: 30px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -207,7 +152,7 @@
   width: 16px;
   height: 15px;
   border: 2px solid $orange-color;
-  border-radius: 2px;
+
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   .form-checkbox:checked + & {
@@ -222,21 +167,27 @@
 .form-button {
   color: $white-color;
   background-color: $orange-color;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 16px;
-  border: 0px;
-  line-height: 1.875;
-  padding: 10px 55px;
+  border: 2px solid transparent;
+  line-height: 1.25;
+  padding: 17px 7px;
   text-transform: uppercase;
   min-width: 200px;
   letter-spacing: 0.08em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   &:hover,
   &:focus {
     background-color: transparent;
     border: 2px solid $orange-color;
     color: $orange-color;
     outline: none;
+  }
+  @include for-size(desktop) {
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.14em;
+
+    padding: 27px 25px;
   }
 }
 
