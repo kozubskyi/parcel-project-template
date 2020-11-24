@@ -169,6 +169,13 @@
   @include for-size(desktop) {
     font-size: 18px;
     line-height: 1.56;
+
+    &:hover,
+    &:focus {
+      background-color: $orange-color;
+      color: $white-color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 }
 
