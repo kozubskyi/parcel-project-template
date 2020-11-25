@@ -6399,6 +6399,16 @@ body.modal-open {
   cursor: pointer;
 }
 
+.close-logo {
+  fill: black;
+  width: 15px;
+  height: 15px;
+}
+.close-logo use {
+  width: 15px;
+  height: 15px;
+}
+
 .footer-form-bg-container {
   background-color: #111518;
   background-image: url(/footer-mob@x1.1fb3d690.png);
