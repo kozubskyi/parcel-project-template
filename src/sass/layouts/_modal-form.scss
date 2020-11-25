@@ -224,3 +224,14 @@ body.modal-open {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+
+.close-logo {
+  fill: black;
+  width: 15px;
+  height: 15px;
+
+  & use {
+    width: 15px;
+    height: 15px;
+  }
+}
